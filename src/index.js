@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from "react-router-dom";
+import "./index.css"
+import {AppProvider} from '@shopify/polaris';
+import enTranslations from '@shopify/polaris/locales/en.json';
+
+
 
 ReactDOM.render(
   <React.StrictMode>
+    <AppProvider i18n={enTranslations}>
+    <BrowserRouter>
     <App />
+    </BrowserRouter>
+    </AppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
