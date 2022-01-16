@@ -1,10 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import PhoneNumber from '../PhoneNumber'
-import * as Styled from '../shared/UserProfile.style'
+import PhoneNumber from "../PhoneNumber";
+import * as Styled from "../shared/UserProfile.style";
 
 const UserProfile = ({ job, about, number, company }) => {
-  // console.log(userInput)
   return (
     <Styled.Container>
       <Styled.Header>User profile</Styled.Header>
@@ -18,7 +17,7 @@ const UserProfile = ({ job, about, number, company }) => {
         <PhoneNumber disabled number={number} />
       </Styled.EditContainer>
     </Styled.Container>
-  )
-}
+  );
+};
 
-export default UserProfile
+export default UserProfile;

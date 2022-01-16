@@ -1,7 +1,5 @@
 import React, { useCallback, useContext, useState } from "react";
 import { Modal } from "@shopify/polaris";
-import * as Styled from "./ImageModal.style";
-import ReactCrop from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 import CropImage from "./CropImage";
 import { ImageContext } from "../UserProfileEdit/UserProfileEdit";
@@ -34,14 +32,12 @@ const ImageModal = ({ isOpen, setOpen, img }) => {
         },
       ]}
     >
-      (
       <CropImage
         completedCrop={completedCrop}
         setCompletedCrop={setCompletedCrop}
         img={img}
         setUrl={setUrl}
       />
-      )
     </Modal>
   );
 };

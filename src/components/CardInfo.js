@@ -1,13 +1,14 @@
-import React, { useEffect, useRef } from "react";
+// import React, { useRef } from "react";
+import React from "react";
 import * as Style from "./CardInfo.style";
 
 const CardInfo = ({ img }) => {
-  const canvasRef = useRef(null);
+  // const canvasRef = useRef(null);
 
   return (
     <Style.CardContainer>
-      <Style.ImageContainer>
-        <img src={img} />
+      <Style.ImageContainer src={img}>
+        <Style.ImgStyle src={img} />
       </Style.ImageContainer>
       <Style.NameContainer> Tal Shefer </Style.NameContainer>
       <Style.EmailContainer> tal.s@prpl.io </Style.EmailContainer>

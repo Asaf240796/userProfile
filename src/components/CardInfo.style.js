@@ -15,9 +15,13 @@ export const ImageContainer = styled.div`
   background: url(.jpg);
   border-radius: 8px;
 `;
+export const ImgStyle = styled.img`
+  width: 84px;
+  height: 84px;
+  border-radius: 50px;
+`;
 
 export const NameContainer = styled.div`
-  /* Header H4 */
   display: flex;
   align-items: center;
   color: #151b26;
@@ -37,9 +41,3 @@ export const EmailContainer = styled.div`
   line-height: 23px;
   color: #6b7381;
 `;
-
-// export const img = styled.img`
-// width:84px;
-// height: 84px;
-// border-radius: 8px;
-// `

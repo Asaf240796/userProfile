@@ -47,7 +47,6 @@ const CropImage = ({ img, setCompletedCrop, completedCrop, setUrl }) => {
 
     setUrl(dataURL);
   }, [completedCrop]);
-  // add card to show the canvas
   return (
     <div>
       <ReactCrop

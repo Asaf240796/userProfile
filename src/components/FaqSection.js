@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { StyleLogo } from "../App";
 import Logo from "./asserts/Logo";
 
 const FaqSection = () => {
@@ -39,7 +38,6 @@ const Faq = styled.div`
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    /* line-height: 26px; */
     color: #151b26;
   }
 `;
@@ -49,9 +47,6 @@ const LogoCoantainer = styled.div`
   padding: 10px;
 `;
 
-const StyledLineBottom = styled.div`
-  border: 1px solid #a3acbd;
-`;
 const CreditText = styled.div`
   font: Gordita;
   font-style: normal;

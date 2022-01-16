@@ -1,5 +1,4 @@
-import React, { useContext, useState } from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
 import PhotoUpload from "../PhotoUpload";
 import PhoneNumber from "../PhoneNumber";
 import * as Styled from "../shared/UserProfile.style";

@@ -1,9 +1,6 @@
-import React, { useCallback, useState, useEffect, useContext } from "react";
-import { Caption, DropZone, Stack, Thumbnail, Modal } from "@shopify/polaris";
-import { NoteMinor } from "@shopify/polaris-icons";
+import React, { useCallback, useState, useEffect } from "react";
+import { Caption, DropZone, Stack } from "@shopify/polaris";
 import ImageModal from "./Modal/ImageModal";
-
-// const validImageTypes = ["image/gif", "image/jpeg", "image/png"];
 
 const PhotoUpload = ({ cropImage }) => {
   const [img, setImg] = useState([]);
@@ -26,7 +23,7 @@ const PhotoUpload = ({ cropImage }) => {
       {cropImage
         ? img.map((file, index) => (
             <Stack alignment="center" key={index}>
-              <img src={cropImage} />
+              <img src={cropImage} alt="cropImage" />
               <div>
                 {file.name} <Caption>{file.size} bytes</Caption>
               </div>
@@ -43,7 +40,6 @@ const PhotoUpload = ({ cropImage }) => {
         accept="image/*"
         allowMultiple={false}
       >
-        {/* {<img src={value}/>} */}
         {uploadedFiles}
         {!img.length && <DropZone.FileUpload />}
       </DropZone>

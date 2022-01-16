@@ -1,22 +1,22 @@
 import styled from "styled-components";
 
 export const Title = styled.div`
-    width: 100%;
-    height: 100%;
-    font-size: 20px;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-`
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+`;
 
 export const Button = styled.button`
-height: 40px;
-align-self: flex-end;
+  height: 40px;
+  align-self: flex-end;
   width: 115px;
   user-select: none;
-  background-color: #734EE1;
+  background-color: #734ee1;
   outline: none;
   padding: 0px;
   position: relative;
@@ -27,7 +27,7 @@ align-self: flex-end;
   overflow: hidden;
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     background: rgba(255, 255, 255, 0.5);
     width: 60px;
@@ -38,7 +38,7 @@ align-self: flex-end;
     transform: translateX(-100px) skewX(-15deg);
   }
   &:hover {
-    background: #734EE1;
+    background: #734ee1;
     cursor: pointer;
     &:before {
       transform: translateX(300px) skewX(-15deg);

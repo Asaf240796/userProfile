@@ -3,7 +3,6 @@ import CardInfo from "../components/CardInfo";
 import UserProfile from "../components/UserProfile/UserProfile";
 import FaqSection from "../components/FaqSection";
 import styled from "styled-components";
-import GlobalStyle from "../components/GlobalStyle";
 import { useLocation } from "react-router";
 
 const UserDetailsPage = () => {

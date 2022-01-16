@@ -1,19 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
-import UserProfileEdit from '../components/UserProfileEdit/UserProfileEdit';
+import React from "react";
+import styled from "styled-components";
+import UserProfileEdit from "../components/UserProfileEdit/UserProfileEdit";
 
-const HomePage = () =>{
+const HomePage = () => {
   return (
     <StyledDiv>
-    <UserProfileEdit/>
+      <UserProfileEdit />
     </StyledDiv>
   );
-}
+};
 
 const StyledDiv = styled.div`
-    display: flex;
-    justify-content: center;
-`
-
+  display: flex;
+  justify-content: center;
+`;
 
 export default HomePage;
