@@ -67,6 +67,7 @@ export const AboutYourselfInput = styled.textarea.attrs(({ value }) => ({
   border-radius: 20px;
   padding: 8px;
   color: ${({ color }) => color};
+  font-weight: ${({ font }) => font};
   :focus {
     border-color: aquamarine;
     outline: none;

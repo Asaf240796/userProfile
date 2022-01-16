@@ -3,16 +3,13 @@ import { Caption, DropZone, Stack, Thumbnail, Modal } from "@shopify/polaris";
 import { NoteMinor } from "@shopify/polaris-icons";
 import ImageModal from "./Modal/ImageModal";
 
-// import ReactCrop from 'react-image-crop'
-
-const validImageTypes = ["image/gif", "image/jpeg", "image/png"];
+// const validImageTypes = ["image/gif", "image/jpeg", "image/png"];
 
 const PhotoUpload = ({ cropImage }) => {
   const [img, setImg] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const handleDropZoneDrop = useCallback(
     (_dropFiles, acceptedFiles, _rejectedFiles) => {
-      // crop and get cropped image from acceptedFile
       setImg((img) => {
         return img.length === 0 ? [...img, ...acceptedFiles] : [...img];
       });

@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import PhotoUpload from "../PhotoUpload";
 import PhoneNumber from "../PhoneNumber";
-
 import * as Styled from "../shared/UserProfile.style";
 import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +12,7 @@ export const ImageContext = React.createContext();
 
 const UserProfileEdit = () => {
   const [color, setColor] = useState("black");
+  const [font, setFontWeight] = useState("normal");
   const [job, setJob] = useState({ text: "", error: false });
   const [company, setCompany] = useState({ text: "", error: false });
   const [about, setAbout] = useState("");
@@ -29,17 +29,19 @@ const UserProfileEdit = () => {
       setJob({ error: false, text });
     }
   };
+
   const handleChangeCompany = (e) => {
     const text = e.target.value;
     if (text.length > 20) {
       setCompany((prev) => ({ ...prev, error: true }));
     } else {
-      setCompany((prev) => ({ error: false, text }));
+      setCompany({ error: false, text });
     }
   };
   const handleChangeAbout = (e) => {
     const text = e.target.value;
     setAbout(text);
+    setFontWeight(text);
   };
 
   const handleSave = () => {
@@ -73,10 +75,19 @@ const UserProfileEdit = () => {
           onChange={handleChangeJob}
         />
         <Styled.SubHeader>Current company</Styled.SubHeader>
-        <Styled.Input value={company.text} onChange={handleChangeCompany} />
+        <Styled.Input
+          error={company.error}
+          value={company.text}
+          onChange={handleChangeCompany}
+        />
         <Styled.SubHeader>About yourself</Styled.SubHeader>
-        <ColorSelector setColor={setColor} />
-        <Styled.AboutYourselfInput color={color} value={about} onChange={handleChangeAbout} />
+        <ColorSelector setColor={setColor} setFontWeight={setFontWeight} />
+        <Styled.AboutYourselfInput
+          color={color}
+          font={font}
+          value={about}
+          onChange={handleChangeAbout}
+        />
         <PhoneNumber number={number} handleChangeNumber={setNumber} />
         <Button callBack={handleSave}>save</Button>
       </Styled.EditContainer>
